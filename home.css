@@ -1,4 +1,4 @@
-.* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -87,4 +87,498 @@ nav a.active {
 .register-btn {
   color: white;
   background: #1677ff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 650px;
+  padding: 80px 7%;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.small-title {
+  color: #1677ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 1.08;
+  margin: 18px 0;
+}
+
+.hero h1 span {
+  color: #1677ff;
+}
+
+.hero-content > p {
+  max-width: 570px;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Hero Buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 23px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.primary-btn {
+  background: #1677ff;
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid #d5dce6;
+  color: #344054;
+  background: white;
+}
+
+/* Hero Info */
+
+.hero-info {
+  display: flex;
+  gap: 22px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-info div {
+  font-size: 12px;
+  color: #667085;
+}
+
+.hero-info strong {
+  color: #1677ff;
+}
+
+/* ================= DOCTOR CARD ================= */
+
+.doctor-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(31, 73, 125, 0.13);
+
+  border: 1px solid #edf2f7;
+}
+
+.doctor-image {
+  height: 310px;
+  background: linear-gradient(135deg, #dcecff, #edf7ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-placeholder {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1677ff;
+  font-size: 50px;
+  font-weight: 800;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-details {
+  padding: 28px;
+}
+
+.available {
+  color: #19a974;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doctor-details h2 {
+  margin-top: 10px;
+  font-size: 27px;
+}
+
+.specialist {
+  color: #667085;
+  margin-top: 5px;
+}
+
+.doctor-rating {
+  margin-top: 18px;
+  color: #f5a623;
+  font-size: 14px;
+}
+
+.doctor-rating span {
+  color: #667085;
+  margin-left: 8px;
+}
+
+.card-btn {
+  display: block;
+  text-align: center;
+
+  margin-top: 23px;
+  padding: 13px;
+
+  background: #1677ff;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 8px;
+
+  font-weight: 700;
+}
+
+/* ================= SECTION ================= */
+
+.doctor-section {
+  padding: 100px 7%;
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+
+.section-heading span {
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin: 15px 0;
+}
+
+.section-heading p {
+  color: #667085;
+  line-height: 1.7;
+}
+
+/* Doctor Profile */
+
+.doctor-profile {
+  max-width: 1000px;
+  margin: 60px auto 0;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  background: #f7fbff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.profile-box {
+  min-height: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e7f2ff;
+}
+
+.profile-icon {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  color: #1677ff;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.profile-content {
+  padding: 55px;
+}
+
+.profile-label {
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.profile-content h2 {
+  font-size: 35px;
+  margin: 12px 0;
+}
+
+.profile-content p {
+  color: #667085;
+  line-height: 1.8;
+}
+
+.credentials {
+  display: flex;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.credentials div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.credentials strong {
+  color: #1677ff;
+  font-size: 20px;
+}
+
+.credentials span {
+  color: #667085;
+  font-size: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+  padding: 100px 7%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  align-items: center;
+}
+
+.about-section h2 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.about-section > div:first-child p {
+  color: #667085;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  max-width: 520px;
+}
+
+.about-cards {
+  display: grid;
+  gap: 15px;
+}
+
+.about-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  border: 1px solid #e8eef5;
+
+  box-shadow: 0 8px 25px rgba(30, 60, 90, 0.05);
+}
+
+.about-card div {
+  font-size: 25px;
+}
+
+.about-card h3 {
+  margin: 10px 0 5px;
+}
+
+.about-card p {
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  margin: 40px 7% 80px;
+  padding: 65px 30px;
+
+  text-align: center;
+
+  border-radius: 20px;
+  background: #1677ff;
+  color: white;
+}
+
+.cta h2 {
+  font-size: 35px;
+}
+
+.cta p {
+  margin: 12px auto 25px;
+  opacity: 0.9;
+}
+
+.cta a {
+  display: inline-block;
+
+  padding: 13px 22px;
+
+  background: white;
+  color: #1677ff;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #101828;
+  color: white;
+  padding: 50px 7% 25px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer-logo span {
+  color: #4da3ff;
+}
+
+footer p {
+  color: #98a2b3;
+  margin: 15px 0 35px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #27303f;
+  padding-top: 20px;
+  color: #667085;
+  font-size: 12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .doctor-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    height: auto;
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+  }
+
+  .login-btn,
+  .register-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 45px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    text-align: center;
+  }
+
+  .doctor-image {
+    height: 260px;
+  }
+
+  .section-heading h2,
+  .about-section h2 {
+    font-size: 30px;
+  }
+
+  .profile-content {
+    padding: 30px;
+  }
+
+  .credentials {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    margin: 20px 5% 50px;
+  }
+
+  .cta h2 {
+    font-size: 27px;
+  }
 }
