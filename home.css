@@ -1,0 +1,90 @@
+.* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f7fbff;
+  color: #172033;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.logo span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  margin-right: 7px;
+
+  background: #1677ff;
+  color: white;
+
+  border-radius: 8px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #596579;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1677ff;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn {
+  color: #1677ff;
+  border: 1px solid #1677ff;
+}
+
+.register-btn {
+  color: white;
+  background: #1677ff;
+}

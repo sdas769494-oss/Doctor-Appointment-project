@@ -3,100 +3,219 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Debanjana | Radiology Appointment</title>
+
+    <title>Dr. Debanjana | Medical Appointment</title>
+
+    <link rel="stylesheet" href="home.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <!--Naver-->
-    <header class="navber">
-      <div class="logo"><span>+</span>Medicare</div>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="logo">
+        <span>+</span>
+        MedCare
+      </div>
+
       <nav>
-        <a href="home.html">Home</a>
-        <a href="doctor.html">Doctor</a>
-        <a href="service.html">Service</a>
-        <a href="appointtment.html">Appointment</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="#doctor">Doctor</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <botton class="login-btn" onclick="loginAlert()">Login </botton>
+
+      <div class="nav-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="register-btn">Register</a>
+      </div>
     </header>
-    <!--Hero-->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="small-tittle">WELCOME TO MEDICARE</p>
-        <h1>Expert Radiology Care <span>Made Simple</span></h1>
-        <p class="hero-text">
-          Book your radiology appointment with
-          <strong>Dr. Debanjana</strong> Quickly and easily
-        </p>
-        <div class="hero-button">
-          <a href="appointment" class="primary-btn">Book Appointment</a>
-          <a href="doctor" class="secondary-btn">Meet Dr. Debanjana</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="doctor-icon"></div>
-        <h2>Dr. Debanjana</h2>
-        <p>Radiologist</p>
-        <div class="available">Available for Appointment</div>
-      </div>
-    </section>
-    <!--Doctor-->
-    <section class="doctor-section" id="doctor">
-      <div class="section-title">
-        <p>MEET YOUR DOCTOR</p>
-        <h2>Dr. Debanjana</h2>
-        <span>Radiologist</span>
-      </div>
-      <div class="doctor-container">
-        <div class="doctor-photo"></div>
-        <div class="doctor-info">
-          <h3>Dr. Debanjana</h3>
-          <h4>Radiology</h4>
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="small-title"> PROFESSIONAL MEDICAL CARE </span>
+
+          <h1>
+            Your Health,<br />
+            <span>Our Priority.</span>
+          </h1>
+
           <p>
-            Dr. Debanjana is dedicated to providing professional and
-            patient-focused radiology care with modern diagnosti techniques.
+            Book an appointment with Dr. Debanjana and receive trusted,
+            compassionate and professional medical care.
           </p>
-          <div class="doctor-details">
+
+          <div class="hero-buttons">
+            <a href="login.html" class="primary-btn"> Book Appointment </a>
+
+            <a href="#doctor" class="secondary-btn"> Meet Our Doctor </a>
+          </div>
+
+          <div class="hero-info">
             <div>
-              <strong>Specialization</strong>
-              <span>Radiology</span>
+              <strong>✓</strong>
+              Verified Doctor
             </div>
+
             <div>
-              <strong>Experience</strong>
-              <span>professional</span>
+              <strong>✓</strong>
+              Easy Appointment
             </div>
+
             <div>
-              <strong>Consultation</strong>
-              <span>By Appointment</span>
+              <strong>✓</strong>
+              Patient Focused
             </div>
           </div>
-          <a href="appointment" class="primary-btn"> Book Appointment </a>
         </div>
-      </div>
-    </section>
-    <!--services-->
-    <section class="services" id="services">
-      <div class="section-title">
-        <p>OUR SERVICES</p>
-        <h2>Radiology services</h2>
-        <span>professional diagnostic services</span>
-      </div>
-      <div class="service-container">
-        <div class="service-card">
-          <div>#</div>
-          <h3>X-ray</h3>
-          <p>professional diagnostic services</p>
+
+        <!-- Doctor Card -->
+
+        <div class="doctor-card">
+          <div class="doctor-image">
+            <div class="doctor-placeholder">Dr.</div>
+          </div>
+
+          <div class="doctor-details">
+            <span class="available"> ● Available for Appointment </span>
+
+            <h2>Dr. Debanjana</h2>
+
+            <p class="specialist">Medical Specialist</p>
+
+            <div class="doctor-rating">
+              ★★★★★
+              <span>Professional Care</span>
+            </div>
+
+            <a href="login.html" class="card-btn"> Book Appointment → </a>
+          </div>
         </div>
-        <div class="service-card">
-          <div>#</div>
-          <h3>Ultrasound</h3>
-          <p>Modern Ultrasound examination service</p>
+      </section>
+
+      <!-- ================= DOCTOR ================= -->
+
+      <section id="doctor" class="doctor-section">
+        <div class="section-heading">
+          <span>MEET YOUR DOCTOR</span>
+
+          <h2>Professional Care You Can Trust</h2>
+
+          <p>
+            Get personalized medical attention from Dr. Debanjana in a
+            comfortable and professional environment.
+          </p>
         </div>
-        <div class="service-card">
-          <div>#</div>
-          <h3>diagnostic Imaging</h3>
-          <p>Reliable imagingg and diagnostic</p>
+
+        <div class="doctor-profile">
+          <div class="profile-box">
+            <div class="profile-icon">+</div>
+          </div>
+
+          <div class="profile-content">
+            <span class="profile-label"> DOCTOR </span>
+
+            <h2>Dr. Debanjana</h2>
+
+            <p>
+              Dedicated to providing quality, patient-centered medical care with
+              professionalism and compassion.
+            </p>
+
+            <div class="credentials">
+              <div>
+                <strong>01</strong>
+                <span>Professional<br />Care</span>
+              </div>
+
+              <div>
+                <strong>02</strong>
+                <span>Patient<br />Focused</span>
+              </div>
+
+              <div>
+                <strong>03</strong>
+                <span>Easy<br />Booking</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+
+      <section id="about" class="about-section">
+        <div>
+          <span class="profile-label"> ABOUT MEDCARE </span>
+
+          <h2>
+            Making Healthcare<br />
+            Simple & Accessible
+          </h2>
+
+          <p>
+            Our appointment system makes it simple for patients to connect with
+            Dr. Debanjana and manage their appointments online.
+          </p>
+
+          <a href="register.html" class="primary-btn"> Get Started </a>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <div>📅</div>
+            <h3>Easy Booking</h3>
+            <p>Choose your preferred date and time for an appointment.</p>
+          </div>
+
+          <div class="about-card">
+            <div>🔒</div>
+            <h3>Secure Account</h3>
+            <p>Your patient information is handled securely.</p>
+          </div>
+
+          <div class="about-card">
+            <div>❤️</div>
+            <h3>Patient First</h3>
+            <p>Designed around a smooth patient experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+
+      <section class="cta">
+        <h2>Ready to Book Your Appointment?</h2>
+
+        <p>
+          Create your account and schedule your appointment with Dr. Debanjana.
+        </p>
+
+        <a href="register.html"> Create Patient Account → </a>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+      <div class="footer-logo"><span>+</span> MedCare</div>
+
+      <p>
+        Professional healthcare appointment system for patients and doctors.
+      </p>
+
+      <div class="footer-bottom">© 2026 MedCare. All Rights Reserved.</div>
+    </footer>
+
+    <script src="js/auth.js"></script>
   </body>
 </html>
