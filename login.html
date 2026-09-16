@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Login | WedCare</title>
+    <link rel="stylesheet" href="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="auth-page">
+    <!--navber-->
+    <header class="navbar">
+      <div class="logo">
+        <span>+</span>
+        MedCare
+      </div>
+      <a href="index.html" class="back-home"> <-Back to Home </a>
+    </header>
+    <!--login-->
+    <main class="auth-container">
+      <div class="auth-card">
+        <div class="auth-icon">+</div>
+        <span>PATIENT PORTAL</span>
+        <h1>Welcome back</h1>
+        <p class="auth-description">
+          Login to manage your apponitment with Dr. Debanjana.
+        </p>
+        <form id="loginForm">
+          <!--Email-->
+          <div class="form-group">
+            <label for="loginEmail"> Email Address </label>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <!--Password-->
+          <div class="form-group">
+            <div class="label-row">
+              <label for="loginPassword"> Password </label>
+              <a href="#" onclick="forgotPassword(event)">forgot Password?</a>
+            </div>
+            <div class="passsword-box">
+              <input type="password" id="loginPassword" required />
+              <button type="button">
+                onclick="togglepassword('loginPassword', this)"> show
+              </button>
+            </div>
+          </div>
+          <!--Remember-->
+          <label class="remember">
+            <input type="checkbox" />
+            Remember me
+          </label>
+          <button type="submit" class="auth-submit">Login to Account</button>
+        </form>
+        <div class="divider">
+          <span>QR</span>
+        </div>
+        <p class="auth-switch">
+          Don't have an account?
+          <a href="register.html"> Create Account </a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
