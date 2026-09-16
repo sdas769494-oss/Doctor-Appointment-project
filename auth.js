@@ -35,10 +35,10 @@ if (resgisterForm) {
     //get existing users//
     const users = JSON.parse(localStrong.getItem("Medcare Users")) || [];
     // check email //
-    const existingUser = users.find(user => user.email === email));
+    const existingUser = users.find((user) => user.email === email);
     if (existingUser) {
-        alert(An account with this email already exists.");
-            return;
+      alert("An account with this email alredy exists.");
+      return;
     }
   });
 }
