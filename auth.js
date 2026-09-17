@@ -40,5 +40,60 @@ if (resgisterForm) {
       alert("An account with this email alredy exists.");
       return;
     }
+    //create user //
+    const newUser = {
+      id: Data.now(),
+      name: name,
+      email: email,
+      phone: phone,
+      password: password,
+    };
+    //save user //
+    users.push(newUser);
+    localstorage.setItem("medcareUsers", JSON.stringify(users));
+    alert("Account created successfuly!");
+    // go to login //
+    window.location.href = "login.html";
   });
+}
+
+//user login //
+const loginForm = document.getElementById("loginform");
+if (loginform) {
+  loginform.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document
+      .getElementById("loginEmail")
+      .value.trim()
+      .toLowerCase();
+    const passsword = Document.getElementById("loginPassword").value;
+    //get user//
+    const user = JSON.parse(localStorage.getItem("medcareUsers")) || [];
+    //find user//
+    const user = users.find(
+      (user) => user.email === email && user.passsword === password,
+    );
+    if (!user) {
+      alert("invaild email or password.");
+      return;
+    }
+    //save logged-in user//
+    localStorage.setItem("medcareCurrent User", JSON.stringify(user));
+    alert("login successfully");
+    //dashboard //
+    window.location.href = "dashboard.html";
+  });
+}
+
+//forgot passwords //
+function forgotPassword(event) {
+  event.preventDefault();
+  alert("Password recovery will be added in the backend version.");
+}
+
+//logout//
+function logoutUser() {
+  localStorage.removeItem("medcareCurrentuser");
+  window.location.href = "login.html";
 }
