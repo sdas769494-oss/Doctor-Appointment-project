@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Dashboard</title>
+     <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body class="auth-page">
+    <header class="navber">
+      <div class="logo">
+        <span>+</span>
+        MedCare
+      </div>
+      <button class="login-btn" onclick="logoutUser()">logout</button>
+    </header>
+    <main class="Dashboard-container">
+      <div class="Dashboard-header">
+        <span class="auth-label"> PATIENT DASHBOARD </span>
+        <h1 id="welcomeMessage">Welcome</h1>
+        <p>Manage your apponitmnets with Dr. Debanjana</p>
+      </div>
+      <div class="Dashboard-card-icon">📅</div>
+      <h3>Book Apponitment</h3>
+      <p>Schedule a new apponitmnet with Dr. Debajana</p>
+      <a href="appointment.html" class="primary-btn">Book Now</a>
+      <div class="Dashboard-card">
+        <div class="Dashboard-card-icon">🧾</div>
+        <h3>My Appointment</h3>
+        <p>View and manage your upcoming appointment</p>
+        <a href="#" class="secondary-btn">View Appointment</a>
+        <div class="Dashboard-card">👱🏻‍♂️</div>
+        <h3>My profile</h3>
+        <p>View your registered Patient infomation.</p>
+        <button class="secondary-btn" onclick="showProfile()">
+          View profile
+        </button>
+        </div>
+      </div>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>

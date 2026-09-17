@@ -1,99 +1,153 @@
-//Toggle password//
+// TOGGLE PASSWORD//
+
 function togglePassword(inputId, button) {
   const input = document.getElementById(inputId);
+
   if (input.type === "password") {
     input.type = "text";
+
     button.textContent = "Hide";
   } else {
     input.type = "password";
-    button.textContent = "show";
+
+    button.textContent = "Show";
   }
 }
-// Register user //
-const resgisterForm = document.getElementById("rgisterForm");
-if (resgisterForm) {
-  resgisterForm.addEventListener("submit", function (event) {
+
+// REGISTER USER//
+
+const registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+  registerForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    const name = document.getElementById("registerName").Value.trim();
+
+    const name = document.getElementById("registerName").value.trim();
+
     const email = document
       .getElementById("registerEmail")
       .value.trim()
       .toLowerCase();
+
     const phone = document.getElementById("registerPhone").value.trim();
+
     const password = document.getElementById("registerPassword").value;
+
     const confirmPassword = document.getElementById("confirmPassword").value;
-    //check password //
+
+    // Check password//
+
     if (password.length < 6) {
-      alert("password must be at least 6 character.");
+      alert("Password must be at least 6 characters.");
+
       return;
     }
-    //confirm passsword//
+
+    // Confirm password//
+
     if (password !== confirmPassword) {
-      alert("passwords do not match.");
+      alert("Passwords do not match.");
+
       return;
     }
-    //get existing users//
-    const users = JSON.parse(localStrong.getItem("Medcare Users")) || [];
-    // check email //
+
+    // Get existing users//
+
+    const users = JSON.parse(localStorage.getItem("medcareUsers")) || [];
+
+    // Check email//
+
     const existingUser = users.find((user) => user.email === email);
+
     if (existingUser) {
-      alert("An account with this email alredy exists.");
+      alert("An account with this email already exists.");
+
       return;
     }
-    //create user //
+
+    // Create user//
+
     const newUser = {
-      id: Data.now(),
+      id: Date.now(),
+
       name: name,
+
       email: email,
+
       phone: phone,
+
       password: password,
     };
-    //save user //
+
+    // Save user//
+
     users.push(newUser);
-    localstorage.setItem("medcareUsers", JSON.stringify(users));
-    alert("Account created successfuly!");
-    // go to login //
+
+    localStorage.setItem("medcareUsers", JSON.stringify(users));
+
+    alert("Account created successfully!");
+
+    // Go to login//
+
     window.location.href = "login.html";
   });
 }
 
-//user login //
-const loginForm = document.getElementById("loginform");
-if (loginform) {
-  loginform.addEventListener("submit", function (event) {
+// LOGIN USER//
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const email = document
       .getElementById("loginEmail")
       .value.trim()
       .toLowerCase();
-    const passsword = Document.getElementById("loginPassword").value;
-    //get user//
-    const user = JSON.parse(localStorage.getItem("medcareUsers")) || [];
-    //find user//
+
+    const password = document.getElementById("loginPassword").value;
+
+    // Get users//
+
+    const users = JSON.parse(localStorage.getItem("medcareUsers")) || [];
+
+    // Find user//
+
     const user = users.find(
-      (user) => user.email === email && user.passsword === password,
+      (user) => user.email === email && user.password === password,
     );
+
     if (!user) {
-      alert("invaild email or password.");
+      alert("Invalid email or password.");
+
       return;
     }
-    //save logged-in user//
-    localStorage.setItem("medcareCurrent User", JSON.stringify(user));
-    alert("login successfully");
-    //dashboard //
+
+    // Save logged-in user//
+
+    localStorage.setItem("medcareCurrentUser", JSON.stringify(user));
+
+    alert("Login successful!");
+
+    // Dashboard//
+
     window.location.href = "dashboard.html";
   });
 }
 
-//forgot passwords //
+// FORGOT PASSWORD//
+
 function forgotPassword(event) {
   event.preventDefault();
+
   alert("Password recovery will be added in the backend version.");
 }
 
-//logout//
+// LOGOUT//
+
 function logoutUser() {
-  localStorage.removeItem("medcareCurrentuser");
+  localStorage.removeItem("medcareCurrentUser");
+
   window.location.href = "login.html";
 }
