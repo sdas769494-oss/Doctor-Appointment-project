@@ -3,7 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Apponitment</title>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="appointment.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body class="appointment-page">
+    <!--navbar-->
+    <header class="navbar">
+      <div class="logo">
+        <span>+</span>
+        WedCare
+      </div>
+      <div class="appointment-nav">
+        <a href="dashboard.html">Dashboard </a>
+        <button onclick="logoutUser()" class="logout-btn">logout</button>
+      </div>
+    </header>
+    <!--main-->
+    <main class="appointment-container">
+      <!--PAGE title-->
+      <div class="appointment-headling">
+        <span class="auth-label"> Apponitment</span>
+        <h1>Book Your Appointment</h1>
+        <p>Schedule a consultation with Dr. Debanjana.</p>
+      </div>
+      <div class="appointment-layout">
+        <!--doctor card-->
+        <aside class="appointment-doctor-card">
+          <div class="doctor-avatar-large">Dr.</div>
+          <span class="available"> Available for Appointment </span>
+          <h2>Dr. Debajana</h2>
+          <p class="doctor-speciality">Medical Specialist</p>
+          <div class="doctor-line"></div>
+          <div class="doctor-info-row">
+            <span>🩺</span>
+            <div>
+              <strong>consultation</strong>
+              <small>Professional Medical care</small>
+            </div>
+          </div>
+          <div class="doctor-info-row">
+            <span>🗓️</span>
+            <div>
+              <strong>Appointment</strong>
+              <small>By schedule booking</small>
+            </div>
+          </div>
+          <div class="doctor-info-row">
+            <span>🔒</span>
+            <div>
+              <strong>Patient privacy</strong>
+              <small>Your information is protected</small>
+            </div>
+          </div>
+        </aside>
+        <!--Booking form-->
+        <section class="booking-card">
+          <div class="booking title">
+            <h2>Apponitment details</h2>
+            <p>Please select your prefered date and available time.</p>
+          </div>
+          <form id="appointmentForm">
+            <!--patient name-->
+            <div class="form-group">
+              <label for="patientNmae">Patient Name</label>
+              <input
+                type="text"
+                id="patientNmae"
+                placeholder="Enter patient name"
+                required
+              />
+            </div>
+            <!--Phone-->
+            <div class="form-group">
+              <label for="patientPhone">Phone Number</label>
+              <input
+                type="tel"
+                id="patientPhone"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+            <!--Date-->
+            <div class="form-group">
+              <label for="appointmentDate">Select Date </label>
+              <input type="date" id="appointmentDate" required />
+            </div>
+            <!--time-->
+            <div class="form-group">
+              <label for="appointmentTime">Select Time</label>
+              <div class="time-slots" id="timeSlots">
+                <button type="button" class="time-slots" date-time="09:00 AM">
+                  09:00 AM
+                </button>
+                <button type="button" class="time-slots" date-time="10:00 AM">
+                  10:00 AM
+                </button>
+                <button type="button" class="time-slots" date-time="11:00 AM">
+                  11:00 AM
+                </button>
+                <button type="button" class="time-slots" date-time="02:00 PM">
+                  02:00 PM
+                </button>
+                <button type="button" class="time-slots" date-time="03:00 PM">
+                  03:00 PM
+                </button>
+                <button type="button" class="time-slots" date-time="05:00 PM">
+                  05:00 PM
+                </button>
+              </div>
+              <input type="hidden" id="selectedTime" required />
+            </div>
+            <!--reason-->
+            <div class="form-group">
+              <label for="appointmentReason">Reason for Appointment</label>
+              <textarea
+                id="appointmentReason"
+                rows="4"
+                placeholder="Briefly describe the reason for your appointment...."
+                required
+              >
+              </textarea>
+            </div>
+            <!--submit-->
+            <button type="submit" class="confirm-btn">
+              Confirm Apponitment
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="auth.js"></script>
+    <script src="appointment.js"></script>
+  </body>
 </html>

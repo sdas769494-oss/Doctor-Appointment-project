@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | MedCare</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="admin-page">
+    <!--SIDEBAR-->
+
+    <aside class="admin-sidebar">
+      <div class="admin-logo">
+        <span>+</span>
+
+        MedCare
+      </div>
+
+      <div class="admin-profile">
+        <div class="admin-avatar">D</div>
+
+        <div>
+          <strong> Admin </strong>
+
+          <small> Dr. Debanjana </small>
+        </div>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="#" class="admin-nav-active"> 📊 Dashboard </a>
+
+        <a href="appointment.html"> 📅 Appointments </a>
+
+        <a href="index.html"> 🌐 View Website </a>
+      </nav>
+
+      <button onclick="adminLogout()" class="admin-logout">🚪 Logout</button>
+    </aside>
+
+    <!--  MAIN  -->
+
+    <main class="admin-main">
+      <!-- TOP BAR -->
+
+      <header class="admin-topbar">
+        <div>
+          <span class="auth-label"> ADMIN PANEL </span>
+
+          <h1>Dashboard</h1>
+        </div>
+
+        <div class="admin-doctor-name">
+          <span class="online-dot"></span>
+
+          Dr. Debanjana
+        </div>
+      </header>
+
+      <!--  STAT CARDS  -->
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">📅</div>
+
+          <div>
+            <span> Total Appointments </span>
+
+            <strong id="totalAppointments"> 0 </strong>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon orange">⏳</div>
+
+          <div>
+            <span> Pending </span>
+
+            <strong id="pendingAppointments"> 0 </strong>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">✓</div>
+
+          <div>
+            <span> Confirmed </span>
+
+            <strong id="confirmedAppointments"> 0 </strong>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon red">✕</div>
+
+          <div>
+            <span> Rejected </span>
+
+            <strong id="rejectedAppointments"> 0 </strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPOINTMENTS -->
+
+      <section class="appointments-section" id="appointments">
+        <div class="section-top">
+          <div>
+            <h2>Recent Appointments</h2>
+
+            <p>Manage patient appointment requests.</p>
+          </div>
+
+          <button onclick="clearAllAppointments()" class="clear-btn">
+            Clear All
+          </button>
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Patient</th>
+
+                <th>Contact</th>
+
+                <th>Date</th>
+
+                <th>Time</th>
+
+                <th>Reason</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="appointmentTableBody"></tbody>
+          </table>
+
+          <!-- EMPTY -->
+
+          <div id="emptyAppointments" class="empty-appointments">
+            <div>📅</div>
+
+            <h3>No appointments yet</h3>
+
+            <p>Patient appointment requests will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

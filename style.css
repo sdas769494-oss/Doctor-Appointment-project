@@ -1,4 +1,59 @@
 /*Authentication pages */
+.navbar {
+  height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.logo span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  margin-right: 7px;
+
+  background: #1677ff;
+  color: white;
+
+  border-radius: 8px;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  text-decoration: none;
+  color: #595979;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar a:hover,
+nav a.active {
+  color: #02132b;
+}
+
+.back-home-btn {
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #b8c0d1;
+}
+
 .auth-page {
   min-height: 100vh;
   background: #f4f8fc;

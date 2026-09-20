@@ -3,41 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Dashboard</title>
-     <link rel="stylesheet" href="dashboard.css" />
+
+    <title>Patient Dashboard | MedCare</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="auth-page">
-    <header class="navber">
-      <div class="logo">
-        <span>+</span>
-        MedCare
-      </div>
-      <button class="login-btn" onclick="logoutUser()">logout</button>
+
+  <body class="dashboard-body">
+    <!--  NAVBAR -->
+    <header class="navbar">
+      <div class="logo"><span>+</span> MedCare</div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="appointment.html">Book Appointment</a>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </nav>
     </header>
-    <main class="Dashboard-container">
-      <div class="Dashboard-header">
-        <span class="auth-label"> PATIENT DASHBOARD </span>
-        <h1 id="welcomeMessage">Welcome</h1>
-        <p>Manage your apponitmnets with Dr. Debanjana</p>
-      </div>
-      <div class="Dashboard-card-icon">📅</div>
-      <h3>Book Apponitment</h3>
-      <p>Schedule a new apponitmnet with Dr. Debajana</p>
-      <a href="appointment.html" class="primary-btn">Book Now</a>
-      <div class="Dashboard-card">
-        <div class="Dashboard-card-icon">🧾</div>
-        <h3>My Appointment</h3>
-        <p>View and manage your upcoming appointment</p>
-        <a href="#" class="secondary-btn">View Appointment</a>
-        <div class="Dashboard-card">👱🏻‍♂️</div>
-        <h3>My profile</h3>
-        <p>View your registered Patient infomation.</p>
-        <button class="secondary-btn" onclick="showProfile()">
-          View profile
-        </button>
+
+    <!-- DASHBOARD -->
+    <main class="patient-dashboard">
+      <!-- Welcome -->
+      <section class="dashboard-welcome">
+        <div>
+          <p class="welcome-small">Welcome back 👋</p>
+          <h1>Hello, <span id="patientName">Patient</span></h1>
+          <p>Manage your appointments and profile from your dashboard.</p>
         </div>
-      </div>
+
+        <a href="appointment.html" class="dashboard-book-btn">
+          + Book Appointment
+        </a>
+      </section>
+
+      <!--  STATISTICS -->
+      <section class="dashboard-stats">
+        <div class="dashboard-stat-card">
+          <div class="stat-icon">📅</div>
+          <div>
+            <h3 id="totalAppointments">0</h3>
+            <p>Total Appointments</p>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="stat-icon pending-icon">⏳</div>
+          <div>
+            <h3 id="pendingAppointments">0</h3>
+            <p>Pending</p>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="stat-icon confirmed-icon">✓</div>
+          <div>
+            <h3 id="confirmedAppointments">0</h3>
+            <p>Confirmed</p>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="stat-icon rejected-icon">✕</div>
+          <div>
+            <h3 id="rejectedAppointments">0</h3>
+            <p>Rejected</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPCOMING APPOINTMENT -->
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <h2>Upcoming Appointment</h2>
+            <p>Your next scheduled appointment</p>
+          </div>
+        </div>
+
+        <div id="upcomingAppointment">
+          <!-- JavaScript will load appointment here -->
+        </div>
+      </section>
+
+      <!--  APPOINTMENT HISTORY  -->
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <h2>Appointment History</h2>
+            <p>All your previous and current appointments</p>
+          </div>
+        </div>
+
+        <div class="appointment-history-container">
+          <div class="appointment-table-wrapper">
+            <table class="patient-appointment-table">
+              <thead>
+                <tr>
+                  <th>Doctor</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Reason</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody id="appointmentHistoryBody">
+                <!-- JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <div id="noAppointments" class="patient-empty-state">
+            <div>📅</div>
+            <h3>No appointments yet</h3>
+            <p>You haven't booked any appointments.</p>
+
+            <a href="appointment.html"> Book Your First Appointment </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE  -->
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <h2>My Profile</h2>
+            <p>Your registered information</p>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-avatar" id="profileAvatar">P</div>
+
+          <div class="profile-details">
+            <div class="profile-item">
+              <span>Full Name</span>
+              <strong id="profileName">-</strong>
+            </div>
+
+            <div class="profile-item">
+              <span>Email</span>
+              <strong id="profileEmail">-</strong>
+            </div>
+
+            <div class="profile-item">
+              <span>Phone</span>
+              <strong id="profilePhone">-</strong>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 MedCare. All Rights Reserved.</p>
+    </footer>
+
     <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>

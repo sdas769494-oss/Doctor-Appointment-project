@@ -86,10 +86,10 @@ nav a.active {
 
 .register-btn {
   color: white;
-  background: #1677ff;
+  background: #35588d;
 }
 
-/* ================= HERO ================= */
+/*  HERO  */
 
 .hero {
   min-height: 650px;
@@ -316,6 +316,8 @@ nav a.active {
 .profile-icon {
   width: 140px;
   height: 140px;
+
+  object-fit: cover;
 
   border-radius: 50%;
 

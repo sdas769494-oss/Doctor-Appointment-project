@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Login | MedCare</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="auth-page">
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+      <div class="logo">
+        <span>+</span>
+        MedCare
+      </div>
+
+      <a href="index.html" class="back-home"> ← Back to Home </a>
+    </header>
+
+    <!-- ADMIN LOGIN -->
+
+    <main class="auth-container">
+      <div class="auth-card admin-auth-card">
+        <div class="admin-icon">🛡️</div>
+
+        <span class="auth-label"> ADMIN PORTAL </span>
+
+        <h1>Admin Login</h1>
+
+        <p class="auth-description">
+          Login to manage patient appointments and the MedCare system.
+        </p>
+
+        <form id="adminLoginForm">
+          <!-- EMAIL -->
+
+          <div class="form-group">
+            <label for="adminEmail"> Admin Email </label>
+
+            <input
+              type="email"
+              id="adminEmail"
+              placeholder="Enter admin email"
+              required
+            />
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="form-group">
+            <label for="adminPassword"> Password </label>
+
+            <div class="password-box">
+              <input
+                type="password"
+                id="adminPassword"
+                placeholder="Enter admin password"
+                required
+              />
+
+              <button
+                type="button"
+                onclick="togglePassword('adminPassword', this)"
+              >
+                Show
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-submit admin-submit">
+            Login to Admin Panel
+          </button>
+        </form>
+
+        <div class="admin-demo-info">
+          <strong>Demo Admin</strong>
+
+          <p>Email: admin@medcare.com</p>
+
+          <p>Password: admin123</p>
+        </div>
+
+        <p class="auth-switch">
+          <a href="index.html"> ← Return to Website </a>
+        </p>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
