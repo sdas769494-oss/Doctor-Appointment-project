@@ -1,5 +1,11 @@
-/* 
-   APPOINTMENT PAGE */
+/* APPOINTMENT PAGE */
+
+.appointment-page {
+  background: #f5f9fd;
+  min-height: 100vh;
+}
+
+/* APPOINTMENT NAV */
 .navbar {
   height: 78px;
   padding: 0 7%;
@@ -32,29 +38,41 @@
   border-radius: 8px;
 }
 
-.navbar {
+nav {
   display: flex;
+  gap: 32px;
 }
-.navbar a {
+
+nav a {
   text-decoration: none;
-  color: #595979;
-  font-size: 20px;
+  color: #596579;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.navbar a:hover,
+nav a:hover,
 nav a.active {
-  color: #02132b;
+  color: #1677ff;
 }
 
-.appointment-page {
-  background: #f5f9fd;
-  min-height: 100vh;
+.nav-buttons {
+  display: flex;
+  gap: 10px;
 }
 
-/* 
-   APPOINTMENT NAV
- */
+.login-btn,
+.register-btn {
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn {
+  color: #1677ff;
+  border: 1px solid #1677ff;
+}
 
 .appointment-nav {
   display: flex;
@@ -89,9 +107,7 @@ nav a.active {
   cursor: pointer;
 }
 
-/* 
-   CONTAINER
- */
+/* CONTAINER */
 
 .appointment-container {
   max-width: 1150px;
@@ -101,18 +117,14 @@ nav a.active {
   padding: 65px 5%;
 }
 
-/* 
-   HEADING
- */
+/* HEADING */
 
 .appointment-heading {
   text-align: center;
 
   margin-bottom: 45px;
 }
-.auth-label {
-  font-size: 40px;
-}
+
 .appointment-heading h1 {
   font-size: 40px;
 
@@ -125,9 +137,7 @@ nav a.active {
   font-size: 14px;
 }
 
-/* 
-   LAYOUT
- */
+/*  LAYOUT */
 
 .appointment-layout {
   display: grid;
@@ -139,7 +149,7 @@ nav a.active {
   align-items: start;
 }
 
-/* DOCTOR CARD */
+/*  DOCTOR CARD  */
 
 .appointment-doctor-card {
   background: white;
@@ -178,6 +188,7 @@ nav a.active {
 
   box-shadow: 0 8px 25px rgba(22, 119, 255, 0.12);
 }
+
 .appointment-doctor-card .available {
   display: block;
 
@@ -235,24 +246,22 @@ nav a.active {
 .doctor-info-row strong {
   display: block;
 
-  color: #01060f;
+  color: #344054;
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .doctor-info-row small {
   display: block;
 
-  color: #062459;
+  color: #98a2b3;
 
   font-size: 11px;
 
   margin-top: 3px;
 }
 
-/* 
-   BOOKING CARD
- */
+/* BOOKING CARD */
 
 .booking-card {
   background: white;
@@ -286,9 +295,7 @@ nav a.active {
   font-size: 13px;
 }
 
-/* 
-   TEXTAREA
- */
+/* TEXTAREA */
 
 .form-group textarea {
   width: 100%;
@@ -314,9 +321,7 @@ nav a.active {
   box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.1);
 }
 
-/*
-   TIME SLOTS
- */
+/* TIME SLOTS */
 
 .time-slots {
   display: grid;
@@ -364,9 +369,7 @@ nav a.active {
   border-color: #1677ff;
 }
 
-/*
-   CONFIRM BUTTON
- */
+/* CONFIRM BUTTON  */
 
 .confirm-btn {
   width: 100%;
@@ -400,9 +403,7 @@ nav a.active {
   transform: translateY(-1px);
 }
 
-/* 
-   RESPONSIVE
- */
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
   .appointment-layout {

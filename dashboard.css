@@ -1,76 +1,38 @@
 /* PATIENT DASHBOARD */
-navbar {
-  height: 78px;
-  padding: 0 7%;
+/* NAVBAR */
+.dashboard-body .navbar {
+  height: 76px;
+  padding: 0 5px;
+  background: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: white;
-  border-bottom: 1px solid #e8eef5;
+  justify-content: space-around;
+  border-bottom: 1px solid #e5eef3;
+  box-shadow: 0 3px 15px rgba(20, 70, 90, 0.06);
 }
-
-.logo {
-  font-size: 25px;
+.dashboard-body .logo {
+  font-size: 27px;
   font-weight: 800;
-  color: #172033;
+  color: #123b5d;
 }
-
-.logo span {
-  display: inline-flex;
+.dashboard-body .navbar nav {
+  display: flex;
   align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  margin-right: 7px;
-
-  background: #1677ff;
-  color: white;
-
-  border-radius: 8px;
-}
-
-nav {
-  display: flex;
-  gap: 32px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #596579;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-nav a:hover,
-nav a.active {
-  color: #1677ff;
-}
-
-.nav-buttons {
-  display: flex;
   gap: 10px;
 }
-
-.logout-btn {
+.dashboard-body .navbar nav a {
   text-decoration: none;
-  padding: 11px 20px;
-  border-radius: 8px;
-  font-size: 14px;
+  color: #527087;
+  font-size: 15px;
   font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
-
-.logout-btn {
-  color: #1677ff;
-  border: 1px solid #1677ff;
+.dashboard-body .navbar nav a:hover {
+  color: #0d9488;
+  background: #e9f8f6;
 }
-
-.dashboard-body {
-  background: #f5f8fc;
-  min-height: 100vh;
-}
-
 /* DASHBOARD MAIN */
 
 .patient-dashboard {
@@ -80,7 +42,7 @@ nav a.active {
   padding: 50px 0;
 }
 
-/*  WELCOME */
+/* WELCOME */
 
 .dashboard-welcome {
   display: flex;
@@ -300,7 +262,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/* APPOINTMENT TABLE */
+/* APPOINTMENT TABLE  */
 
 .appointment-table-wrapper {
   width: 100%;
@@ -362,7 +324,7 @@ nav a.active {
   color: #475569;
 }
 
-/* CANCEL BUTTON */
+/* CANCEL BUTTON  */
 
 .cancel-appointment-btn {
   border: none;
@@ -383,7 +345,7 @@ nav a.active {
   color: #94a3b8;
 }
 
-/*  EMPTY STATE */
+/* EMPTY STATE */
 
 .patient-empty-state {
   text-align: center;
@@ -415,7 +377,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/*  PROFILE  */
+/* PROFILE */
 
 .profile-card {
   display: flex;
