@@ -48,9 +48,9 @@ nav a.active {
 .back-home-btn {
   text-decoration: none;
   padding: 11px 20px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
   background-color: #b8c0d1;
 }
 
@@ -63,7 +63,7 @@ nav a.active {
   text-decoration: none;
   color: #596579;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .back-home:hover {
   color: #1677ff;
@@ -84,6 +84,10 @@ nav a.active {
   border-radius: 20px;
   border: 1px solid #efedf5;
   box-shadow: 0 20px 60px rgb(31, 73, 125 0);
+}
+.auth-card p {
+  font-weight: bold;
+  color: blue;
 }
 /* icon */
 .auth-icon {
@@ -199,7 +203,7 @@ nav a.active {
   height: 49px;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: black;
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
@@ -207,18 +211,19 @@ nav a.active {
   transition: 0.2s;
 }
 .auth-submit:hover {
-  background: #0d68e5;
+  background: #06e920;
   transform: translate(-1px);
 }
 /* switch */
 .auth-switch {
   text-align: center;
-  color: #667085;
+  color: #00030a;
+  font-weight: 600;
   font-size: 13px;
   margin-top: 22px;
 }
 .auth-switch a {
-  color: #1677ff;
+  color: #010812;
   font-weight: 700;
   text-decoration: none;
 }

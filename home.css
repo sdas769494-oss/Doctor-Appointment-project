@@ -331,6 +331,9 @@ nav a.active {
   font-size: 60px;
   font-weight: 800;
 }
+.profile-icon img {
+  width: 1000px;
+}
 
 .profile-content {
   padding: 55px;
