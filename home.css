@@ -294,48 +294,26 @@ nav a.active {
 .doctor-profile {
   max-width: 1000px;
   margin: 60px auto 0;
-
+  height: 400px;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-
+  grid-template-columns: repeat(2, 1fr);
   background: #f7fbff;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .profile-box {
-  min-height: 360px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #e7f2ff;
+  height: 100%;
 }
 
-.profile-icon {
-  width: 140px;
-  height: 140px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: white;
-
-  color: #1677ff;
-  font-size: 60px;
-  font-weight: 800;
-}
-.profile-icon img {
-  width: 1000px;
+.profile-box img {
+  width: 100%;
+  height: 100%;
 }
 
 .profile-content {
+  height: 100%;
+  width: 100%;
   padding: 55px;
 }
 
